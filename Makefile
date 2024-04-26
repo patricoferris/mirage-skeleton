@@ -1,31 +1,31 @@
 -include Makefile.config
 
 BASE_TESTS = \
-  tutorial/noop \
-  tutorial/hello \
-  tutorial/hello-key \
-  tutorial/lwt/echo_server \
-  tutorial/lwt/heads1 \
-  tutorial/lwt/heads2 \
-  tutorial/lwt/timeout1 \
-  tutorial/lwt/timeout2 \
-  tutorial/lwt/echo_server \
-  tutorial/app_info \
-  device-usage/clock \
-  device-usage/conduit_server \
-  device-usage/http-fetch \
-  device-usage/kv_ro \
-  device-usage/network \
-  device-usage/ping6 \
-  device-usage/prng \
-  device-usage/disk-lottery \
-  applications/docteur \
-  applications/dhcp \
-  applications/http \
-  applications/git \
-  applications/dns \
-  applications/crypto \
-  applications/static_website_tls
+  src/tutorial/noop \
+  src/tutorial/hello \
+  src/tutorial/hello-key \
+  src/tutorial/lwt/echo_server \
+  src/tutorial/lwt/heads1 \
+  src/tutorial/lwt/heads2 \
+  src/tutorial/lwt/timeout1 \
+  src/tutorial/lwt/timeout2 \
+  src/tutorial/lwt/echo_server \
+  src/tutorial/app_info \
+  src/device-usage/clock \
+  src/device-usage/conduit_server \
+  src/device-usage/http-fetch \
+  src/device-usage/kv_ro \
+  src/device-usage/network \
+  src/device-usage/ping6 \
+  src/device-usage/prng \
+  src/device-usage/disk-lottery \
+  src/applications/docteur \
+  src/applications/dhcp \
+  src/applications/http \
+  src/applications/git \
+  src/applications/dns \
+  src/applications/crypto \
+  src/applications/static_website_tls
 # disabled as it is using an old version of conduit:
 # device-usage/pgx
 # disabled as it is incompatible with dune 3.7
@@ -35,7 +35,7 @@ ifeq ($(MODE),muen)
 	TESTS = $(BASE_TESTS)
 else
 	TESTS = $(BASE_TESTS)
-	TESTS += device-usage/block
+	TESTS += src/device-usage/block
 endif
 
 CONFIGS = $(patsubst %, %-configure, $(TESTS))

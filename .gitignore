@@ -12,6 +12,9 @@ myocamlbuild.ml
 *.opam
 _opam
 
+# Mdbook
+book
+
 # Generated outputs
 *.native
 *.cfg

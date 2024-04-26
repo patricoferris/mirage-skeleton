@@ -1,0 +1,7 @@
+[book]
+authors = ["MirageOS Developers"]
+language = "en"
+multilingual = false
+src = "src"
+title = "MirageOS Book"
+theme = "theme"
